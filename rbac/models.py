@@ -43,7 +43,7 @@ class AccessUrl(models.Model):
     访问url表抑或者叫权限表
     通过url来限制用户访问的权限
     """
-    title = models.CharField(verbose_name="url地址名称/权限名称")
+    title = models.CharField(verbose_name="url地址名称/权限名称", max_length=32)
     url = models.TextField(verbose_name="访问url")
 
     def __str__(self):
